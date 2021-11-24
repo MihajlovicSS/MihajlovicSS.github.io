@@ -1,0 +1,167 @@
+/* User Mixins 
+---------------------------------------*/
+.main-paddings(@top, @lr, @bottom){
+    padding: @top @lr @bottom;
+}
+/*
+text-align: center; выравнивание все inline-элементов
+vertical-align: center; выравнивание inline элементов внутри строки, 
+должно быть несколько inline-элементов.
+*/
+/*width is known*/
+.center-block(){                                    
+    margin: 0 auto;
+}
+.center-block(@width){                              /*width is set*/
+  margin: 0 auto;
+  width: @width;
+}
+.center-abs-pos-hor(@width){                         /*width is set*/
+  width: @width;                             
+  position: absolute;
+  margin: auto;
+  left: 0; right: 0;
+}
+.center-abs-pos-ver(@height){                         /*height is set*/
+  height: @height;                           
+  position: absolute;
+  margin: auto;
+  left: 0; right: 0;
+}
+.center-abs-pos-ver(@height){                          /*height is set*/
+  position: absolute;
+  top: 50%;
+  height: @height;
+  margin-top: -calc(@height/2); 
+  /*top: calc(50% - @height/2)*/
+}
+.center-abs-pos(@height, @width){                    /*width and height is set*/         
+  height: @height;
+  width: @width;
+  position: absolute;
+  margin: auto;
+  left: 0; right: 0; top: 0; bottom: 0;
+}
+.center-abs(){                                       /*width and height are unknown*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.center-abs-hor(){
+  position: absolute;
+  left: 50%;
+  transform: translate(0, -50%);
+}
+.center-abs-ver(){
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, 0);
+}
+.center-table(){                                /*needed width and height of mother element*/
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.center-flex(){                                 /*width and height are unknown*/
+  display: flex;                                /*container's height is needed*/
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+/*Центрирование инлайнов внутри блоков, значения задать родителю. 
+			font-size: 78px;
+			line-height: 119px;
+*/
+/*Parent's height is set by line-height
+Child is inline or inline-block, vertical-align: middle*/
+.clearfix::after {/*not a mixin*/
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* .fluidFontSize(@Fmin, @Fmax, @Vmin, @Vmax){
+  font-size: @Fmin;
+  @media (min-width: @Vmin){
+      @Vdif: @Vmax - @Vmin;
+      @Fdif: @Fmax - @Fmin;
+  font-size: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Fdif)~") +"@Fmin~")";
+  //calc( (100vw - @Vmin)/(@Vmax - @Vmin) * (@Fmax - @Fmin) + @Fmin)
+  }
+  @media (min-width: @Vmax) {
+      font-size: @Fmax;
+}
+} */
+.fluidFontSize(@Fmin, @Fmax, @Vmin, @Vmax){
+  font-size: @Fmin;
+  @media (min-width: @Vmin){
+    @Vdif: @Vmax - @Vmin;
+    @Fdif: @Fmax - @Fmin;
+    font-size: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Fdif)~") +"@Fmin~")";
+  }
+}
+.fluidMarginSide(@Mmin, @Mmax, @Vmin, @Vmax, @side){
+  margin-@{side}: @Mmin;
+  @media (min-width: @Vmin){
+    @Vdif: @Vmax - @Vmin;
+    @Mdif: @Mmax - @Mmin;
+    margin-@{side}: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Mdif)~") +"@Mmin~")";
+  }
+}
+.fluidMargin(@Mmin, @Mmax, @Vmin, @Vmax){
+  margin: @Mmin;
+  @media (min-width: @Vmin){
+    @Vdif: @Vmax - @Vmin;
+    @Mdif: @Mmax - @Mmin;
+    margin: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Mdif)~") +"@Mmin~")";
+  }
+}
+.fluidPaddingSide(@Pmin, @Pmax, @Vmin, @Vmax, @side){
+  padding-@{side}: @Pmin;
+  @media (min-width: @Vmin){
+    @Vdif: @Vmax - @Vmin;
+    @Pdif: @Pmax - @Pmin;
+    padding-@{side}: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Pdif)~") +"@Pmin~")";
+  }
+}
+.fluidPadding(@Pmin, @Pmax, @Vmin, @Vmax){
+  padding: @Pmin;
+  @media (min-width: @Vmin){
+    @Vdif: @Vmax - @Vmin;
+    @Pdif: @Pmax - @Pmin;
+    padding: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Pdif)~") +"@Pmin~")";
+  }
+}
+.fluidWidth(@Wmin, @Wmax, @Vmin, @Vmax){
+  width: @Wmin;
+  @media (min-width: @Vmin){
+    @Vdif: @Vmax - @Vmin;
+    @Wdif: @Wmax - @Wmin;
+    width: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Wdif)~") +"@Wmin~")";
+  }
+}
+.fluidWidthFlag(@Wmin, @Wmax, @Vmin, @Vmax, @flag){
+  @{flag}-width: @Wmin;
+  @media (min-width: @Vmin){
+    @Vdif: @Vmax - @Vmin;
+    @Wdif: @Wmax - @Wmin;
+    @{flag}-width: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Wdif)~") +"@Wmin~")";
+  }
+}
+.fluidHeight(@Hmin, @Hmax, @Vmin, @Vmax){
+  height: @Hmin;
+  @media (min-width: @Vmin){
+    @Vdif: @Vmax - @Vmin;
+    @Hdif: @Hmax - @Hmin;
+    height: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Hdif)~") +"@Hmin~")";
+  }
+}
+.fluidLineHeight(@LHmin, @LHmax, @Vmin, @Vmax){
+  line-height: @LHmin;
+  @media (min-width: @Vmin){
+    @Vdif: @Vmax - @Vmin;
+    @LHdif: @LHmax - @LHmin;
+    line-height: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@LHdif)~") +"@LHmin~")";
+  }
+}

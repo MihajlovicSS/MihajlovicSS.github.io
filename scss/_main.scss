@@ -1,0 +1,21 @@
+/* Body
+---------------------------------------*/
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 400;
+	color: black;
+	background-color: white;
+}
+.wrapper{
+	background-image: $gradient-soft;
+}
+.container{
+	width: 1620px;
+	padding: 0 10px;
+	@include center-block();
+}

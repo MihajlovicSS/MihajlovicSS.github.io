@@ -1,0 +1,34 @@
+/* Header Dark */
+.main-header{
+    @include main-paddings(50px, 150px, 50px);
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo-svg{
+        width: 130px;
+        height: 60px;
+    }
+    &__contacts-and-menu{
+        display: flex;
+        flex-direction: column;
+    }
+    .contacts{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &__languages::after{
+            @include dot;    
+        }
+        &__language{
+            @include fonts(12px, 15px, 700, white, 1px);
+        }
+        &__address{
+            @include fonts(16px, 19px, 400, white, false);
+        }
+        &__phone{
+            @include fonts(16px, 19px, 700, white, false);
+        }
+    }
+}
