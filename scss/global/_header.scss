@@ -1,0 +1,89 @@
+/* Header Dark */
+.main-header{
+    @include main-paddings(50px, 150px, 50px);
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo-svg{
+        width: 130px;
+        height: 60px;
+    }
+    &__contacts-and-menu{
+        display: flex;
+        flex-direction: column; 
+    }
+    .contacts{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 16px;
+        &__languages{
+            display: flex;
+            position: relative;
+            margin-right: 18px;
+        }
+        &__languages::after, &__address::after, &__phone::after{
+            @include dot;   
+        }
+        &__languages::after{
+            top: 10px;
+            right: -12px;           
+        }
+        &__language{
+            @include fonts(12px, 15px, 700, white, 1px);
+            padding: 5px 7px;
+            text-transform: uppercase;
+        }
+        &__language--active{
+            background-color: $accent;
+            border-radius: 8px;
+        }
+        &__address{
+            @include fonts(16px, 19px, 400, white, false);
+            margin-right: 18px;
+            position: relative;
+        }
+        &__address::after, &__phone::after{  
+            top: 7px;
+            right: -12px; 
+        }
+        &__phone{
+            @include fonts(16px, 19px, 700, white, false);
+            margin-right: 18px;
+            position: relative;
+        }
+        &__socials{
+            width: 24px;
+            height: 24px;
+        }
+        &__facebook{
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+    }
+    .main-navigation{
+        &__nav{
+
+        }
+        &__list{
+            display: flex;
+            justify-content: end;
+        }
+        &__item{
+            margin-right: 15px;
+        }
+        &__item:last-child{
+            margin-right: 0;
+        }
+        &__link{
+            display: block;
+            @include fonts(16px, 19px, 700, white, false);
+        }
+        &__link:active{
+            color: $accent;
+        }
+    }
+}

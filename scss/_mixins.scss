@@ -57,12 +57,12 @@ vertical-align: center; выравнивание inline элементов вн�
 @mixin center-abs-hor(){
   position: absolute;
   left: 50%;
-  transform: translate(0, -50%);
+  transform: translate(-50%, 0);
 }
 @mixin center-abs-ver(){
   position: absolute;
   top: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(0, -50%);
 }
 @mixin center-table(){                                /*needed width and height of mother element*/
   display: table-cell;

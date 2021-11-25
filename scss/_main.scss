@@ -12,7 +12,16 @@ body{
 	background-color: white;
 }
 .wrapper{
-	background-image: $gradient-soft;
+	background-image: $gradient-supersoft;
+	border-width: 0;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;	
+	box-shadow: 0 20px 0 -10px #CACADB,
+				0 40px 0 -20px #E7E7F2;
+}
+.wrapper-for-h{
+	background: url(../img/png/H-symbol.png) no-repeat top center;
+	background-size: 872px 1000px; 
 }
 .container{
 	width: 1620px;

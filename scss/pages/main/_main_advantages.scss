@@ -1,0 +1,50 @@
+.advantages{
+    @include main-paddings(30px, 0, 0);
+    &__link{
+        @include fonts(14px, 17px, 700, $active-regular, 1px);
+        margin-bottom: 10px;
+        position: relative;
+    }
+    &__link::after{
+        @include arrow-small;
+        top: 6px;
+        right: -10px;
+    }
+    &__link:hover::after{
+        @include arrow-small-hover;
+    }
+    &__title{
+        @include gradient-text;
+        @extend %hero-text;
+        margin-bottom: 60px;
+    }
+    &__block{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .advantage{
+        width: 493px;
+        margin-bottom: 60px;
+        &__image-wrap{
+            width: 92px;
+            height: 92px;
+            background-color: white;
+            border-radius: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        &__image-svg{
+        }
+        &__title{
+            color: $active-regular;
+            margin-bottom: 15px;
+        }
+        &__text{
+            @include fonts(16px, 26px, 400, white, false);
+        }
+    }
+}

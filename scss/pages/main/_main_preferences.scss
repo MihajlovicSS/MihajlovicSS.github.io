@@ -1,0 +1,46 @@
+.preferences{
+    @include main-paddings(60px, 0, 30px);
+    &__container{
+        display: flex;
+        justify-content: center;
+    }
+    &__list{
+        padding: 10px 60px;
+        border-right: 4px solid rgba(255, 255, 255, 0.3);
+    }
+    &__li{
+        min-width: 375px;
+        margin-bottom: 30px;
+    }
+    &__li:last-child{
+        margin-bottom: 0;
+    }
+    &__link{
+        @extend %hero-text;
+        color: $text;
+        display: block;
+        text-align: right;
+    }
+    &__link--gradient{
+        @include gradient-text-reversed;
+    }
+    &__link:hover{
+        background: none;
+        background-clip: border-box;
+        -webkit-text-fill-color: initial;
+    }
+    &__description{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 861px;
+        margin-left: 60px;
+    }
+    &__title{
+        color: white;
+        margin-bottom: 30px;
+    }
+    &__text{
+        @include fonts(19px, 30px, 400, white, false);
+    }
+}

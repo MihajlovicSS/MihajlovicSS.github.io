@@ -5,5 +5,26 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    color: white;
+    background-color: white;
+}
+@mixin gradient-text-reversed{
+    background: $gradient-text-and-icon-reversed;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@mixin gradient-text{
+    background: $gradient-text-and-icon;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@mixin arrow-small{
+    @include pseudo;
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid $active-regular;
+    border-bottom: 2px solid $active-regular;
+    transform: rotate(-45deg);
+}
+@mixin arrow-small-hover{
+    border-color: $accent;
 }

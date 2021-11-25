@@ -1,0 +1,30 @@
+.screen{
+    display: flex;
+    min-height: 833px;
+    position: relative;
+    &__title{
+        width: 800px;
+        @include center-block();
+        color: white;
+        text-align: center;
+        margin-top: 310px;
+    }    
+    &__arrow{
+        width: 42px;
+        height: 42px;
+        left: 50%;
+        bottom: 30px;
+        transform: translate(-50%, 0);
+        position: absolute;
+    }
+    &__arrow-icon{
+        width: 42px;
+        height: 42px;
+        fill: none;
+        stroke: white;
+    }
+    &__arrow-icon:hover{
+        stroke: $accent;
+        cursor: pointer;
+    }
+}
