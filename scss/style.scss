@@ -16,6 +16,7 @@
 /* 1) @import
 -------------------------*/
 @import "_reset";
+@import url('https://unpkg.com/swiper@7/swiper-bundle.min.css');
 @import "_fonts";
 @import "_variables";
 @import "_mixins";
@@ -28,5 +29,5 @@
 @import "pages/main/_main_screen";
 @import "pages/main/_main_preferences";
 @import "pages/main/_main_advantages";
-@import "pages/main/_main_carousel";
+@import "pages/main/main_swiper";
 

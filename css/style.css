@@ -18,6 +18,7 @@
 -------------------------*/
 /* CSS Document */
 /*Reset*/
+@import url("https://unpkg.com/swiper@7/swiper-bundle.min.css");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -122,7 +123,7 @@ h1 {
   color: white;
 }
 
-.preferences__link, .advantages__title {
+.preferences__link, .advantages__title, .slider .slide__quote {
   font-size: 38px;
   line-height: 46px;
   font-weight: 700;
@@ -174,7 +175,8 @@ body {
 }
 
 .wrapper {
-  background-image: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  background: url(../img/png/H-symbol.png) no-repeat top center, linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  background-size: 872px 1000px, auto auto;
   border-width: 0;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -203,11 +205,6 @@ body {
   height: 10px;
   bottom: -20px;
   left: 20px;
-}
-
-.wrapper-for-h {
-  background: url(../img/png/H-symbol.png) no-repeat top center;
-  background-size: 872px 1000px;
 }
 
 .container {
@@ -580,7 +577,91 @@ a:hover {
   line-height: 26px;
 }
 
-.carousel {
-  height: 100px;
+.slider {
+  padding: 80px 0 30px;
+}
+
+.slider .swiper {
+  width: 100%;
+  padding-bottom: 46px;
+}
+
+.slider .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider .slide__image-block {
+  width: 400px;
+  height: 298px;
+}
+
+.slider .slide__description {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 30px;
+  background-color: #F5F5FA;
+}
+
+.slider .slide__link {
+  font-size: 14px;
+  color: #24A3FF;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.slider .slide__link::after {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #24A3FF;
+  border-bottom: 2px solid #24A3FF;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 6px;
+  right: -10px;
+}
+
+.slider .slide__quote {
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 27px;
+}
+
+.slider .slide__name, .slider .slide__position {
+  display: block;
+}
+
+.slider .slide__name {
+  font-size: 16px;
+  color: #B3B3BA;
+  font-weight: 700;
+  line-height: 19px;
+  margin-bottom: 6px;
+}
+
+.slider .slide__position {
+  font-size: 14px;
+  color: #B3B3BA;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets {
+  bottom: 0;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  margin-right: 15px;
+  color: #24A3FF;
 }
 /*# sourceMappingURL=style.css.map */
