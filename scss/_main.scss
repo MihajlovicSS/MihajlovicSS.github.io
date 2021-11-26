@@ -16,8 +16,25 @@ body{
 	border-width: 0;
 	border-bottom-left-radius: 12px;
 	border-bottom-right-radius: 12px;	
-	box-shadow: 0 20px 0 -10px #CACADB,
-				0 40px 0 -20px #E7E7F2;
+	position: relative;
+}
+.wrapper::before{
+	@include pseudo;
+	background: url(/img/png/shadow-dark.png) no-repeat;
+	background-size: 100% 100%;
+	width: calc(100% - 20px);
+	height: 10px;
+	bottom: -10px;
+	left: 10px;
+}
+.wrapper::after{
+	@include pseudo;
+	background: url(/img/png/shadow-light.png) no-repeat;
+	background-size: 100% 100%;
+	width: calc(100% - 40px);
+	height: 10px;
+	bottom: -20px;
+	left: 20px;
 }
 .wrapper-for-h{
 	background: url(../img/png/H-symbol.png) no-repeat top center;
