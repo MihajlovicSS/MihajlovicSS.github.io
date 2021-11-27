@@ -1,0 +1,70 @@
+.main-footer{
+    @include main-paddings(32px, 0, 30px);
+    border: 2px solid $separator;
+    background-color: $bg;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .contacts{
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        &__address-and-map{
+            display: flex;
+            align-items: center;
+        }
+        &__address{
+            @include fonts(16px, 19px, 400, $main, false);
+            position: relative;
+            margin-right: 26px;
+        }
+        &__address::after{
+            @include dot;
+            top: 7px;
+            right: -16px;
+            background-color: $text;
+        }
+        &__map{
+            @include fonts(12px, 15px, 700, $active-regular, 1px);
+            text-transform: uppercase;
+        }
+        &__phone-and-net{
+            display: flex;
+            align-items: center;
+        }
+        &__facebook{
+            fill: $active-regular;
+            width: 38px;
+            height: 38px;
+            position: relative;
+            margin-right: 26px;
+        }
+        &__phone{
+            @include fonts(16px, 19px, 700, $main-alt, false);
+            position: relative;
+            margin-right: 26px;
+        }
+        &__phone::after, &__phone::before{
+            @include dot;
+            top: 7px;
+            background-color: $text;
+        }
+        &__phone::before{
+            left: -15px;
+        }
+        &__phone::after{
+            right: -15px;
+        }
+        &__email{
+            @include fonts(16px, 19px, 700, $active-regular, false);
+        }
+    }
+    &__copyrights{
+        width: 500px;
+    }
+    &__copyrights-text{
+        @include fonts(16px, 19px, 400, $text, false);
+        text-align: right;
+    }
+}

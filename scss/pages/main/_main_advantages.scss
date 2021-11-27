@@ -1,17 +1,7 @@
 .advantages{
     @include main-paddings(30px, 0, 0);
     &__link{
-        @include fonts(14px, 17px, 700, $active-regular, 1px);
         margin-bottom: 10px;
-        position: relative;
-    }
-    &__link::after{
-        @include arrow-small;
-        top: 6px;
-        right: -10px;
-    }
-    &__link:hover::after{
-        @include arrow-small-hover;
     }
     &__title{
         @include gradient-text;

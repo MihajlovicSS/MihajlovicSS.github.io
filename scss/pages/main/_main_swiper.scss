@@ -16,13 +16,7 @@
             background-color: $bg;
         }
         &__link{
-            @include fonts(14px, 17px, 700, $active-regular, 1px);
             margin-bottom: 5px;
-        }
-        &__link::after{
-            @include arrow-small;
-            top: 6px;
-            right: -10px;
         }
         &__quote{
             @include gradient-text;

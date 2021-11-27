@@ -11,3 +11,19 @@ a:hover{
 	color: $accent;
 	cursor: pointer;
 }
+.link{
+	@include fonts(14px, 17px, 700, $active-regular, 1px);
+	text-transform: uppercase;
+	position: relative;
+}
+.link::after{
+	@include arrow-small;
+	top: 4px;
+    right: -10px;
+}
+.link:hover{
+	color: $accent;
+}
+.link:hover::after{
+	@include arrow-small-hover;
+}
