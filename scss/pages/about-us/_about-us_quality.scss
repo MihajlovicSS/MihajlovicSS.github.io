@@ -1,0 +1,22 @@
+.quality{
+    @include main-paddings(60px, 0, 60px);
+    &__container{
+        display: flex;
+        justify-content: center;
+    }
+    &__description{
+        width: 938px;
+        margin-right: 60px;
+    }
+    &__text{
+        @include fonts(19px, 30px, 400, black, false);
+    }
+    &__text:not(:first-child){
+        margin-top: 20px;
+    }
+    &__title{
+        width: 361px;
+        @extend %hero-text;
+        @include gradient-text;
+    }
+}

@@ -1,20 +1,5 @@
-/* Style
----------------------------------------*/
-/*
-1) @import.
-2) Header.
-3) About-chair.
-4) Proposals.
-5) Bonus-shops.
-6) Impuls.
-7) Watched.
-8) Popular-categories.
-9) Social.
-10) Footer.
 
-*/
-/* 1) @import
--------------------------*/
+/*@import-------------------------*/
 @import "_reset";
 @import url('https://unpkg.com/swiper@7/swiper-bundle.min.css');
 @import "_fonts";
@@ -33,4 +18,6 @@
 @import "pages/main/main_companies";
 @import "pages/main/main_publications";
 @import "global/_footer";
-
+@import "pages/about-us/_about-us_legal-services";
+@import "pages/about-us/_about-us_team";
+@import "pages/about-us/_about-us_quality";

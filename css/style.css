@@ -1,21 +1,5 @@
 @charset "UTF-8";
-/* Style
----------------------------------------*/
-/*
-1) @import.
-2) Header.
-3) About-chair.
-4) Proposals.
-5) Bonus-shops.
-6) Impuls.
-7) Watched.
-8) Popular-categories.
-9) Social.
-10) Footer.
-
-*/
-/* 1) @import
--------------------------*/
+/*@import-------------------------*/
 /* CSS Document */
 /*Reset*/
 @import url("https://unpkg.com/swiper@7/swiper-bundle.min.css");
@@ -123,7 +107,7 @@ h1 {
   color: white;
 }
 
-.preferences__link, .advantages__title, .slider .slide__quote, .publications__title {
+.preferences__link, .advantages__title, .slider .slide__quote, .publications__title, .legal-services__title, .quality__title {
   font-size: 38px;
   line-height: 46px;
   font-weight: 700;
@@ -283,6 +267,7 @@ a:hover {
 .main-header__logo-svg {
   width: 130px;
   height: 60px;
+  fill: white;
 }
 
 .main-header__contacts-and-menu {
@@ -340,11 +325,15 @@ a:hover {
   letter-spacing: 1px;
   padding: 5px 7px;
   text-transform: uppercase;
+  border-radius: 8px;
 }
 
 .main-header .contacts__language--active {
   background-color: #F0145A;
-  border-radius: 8px;
+}
+
+.main-header .contacts__language:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .main-header .contacts__address {
@@ -379,6 +368,12 @@ a:hover {
   width: 24px;
   height: 24px;
   fill: white;
+  -webkit-transition: fill 0.20s ease-in-out;
+  transition: fill 0.20s ease-in-out;
+}
+
+.main-header .contacts__facebook:hover {
+  fill: #F0145A;
 }
 
 .main-header .main-navigation__list {
@@ -404,10 +399,57 @@ a:hover {
   color: white;
   font-weight: 700;
   line-height: 19px;
+  position: relative;
 }
 
-.main-header .main-navigation__link:active {
+.main-header .main-navigation__link::after {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  bottom: -3px;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+
+.main-header .main-navigation__link:hover::after {
+  opacity: 1;
+}
+
+.main-header .main-navigation_link--active {
   color: #F0145A;
+}
+
+.main-header--white .main-header__logo-svg {
+  fill: #323264;
+}
+
+.main-header--white .contacts__language, .main-header--white .contacts__address, .main-header--white .contacts__phone {
+  color: #B3B3BA;
+}
+
+.main-header--white .contacts__facebook {
+  fill: #B3B3BA;
+}
+
+.main-header--white .main-navigation__link {
+  color: #24A3FF;
+}
+
+.main-header--white .contacts__languages::after, .main-header--white .contacts__address::after, .main-header--white .contacts__phone::after {
+  background-color: #B3B3BA;
+}
+
+.main-header--white .contacts__language:hover {
+  background-color: #F5F5FA;
+}
+
+.main-header--white .main-navigation__link::after {
+  background-color: #24A3FF;
 }
 
 .screen {
@@ -948,5 +990,127 @@ a:hover {
   font-weight: 400;
   line-height: 19px;
   text-align: right;
+}
+
+.legal-services {
+  padding: 10px 0 60px;
+}
+
+.legal-services__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.legal-services__description {
+  width: 942px;
+  margin-right: 30px;
+}
+
+.legal-services__title {
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.legal-services__text {
+  margin-top: 28px;
+}
+
+.legal-services__statistics {
+  width: 388px;
+  padding: 0 30px;
+  border-left: 4px solid #E6E6F0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.legal-services__item {
+  margin-bottom: 38px;
+}
+
+.legal-services__item-title {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.legal-services__item-number {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.legal-services__item-svg {
+  fill: #F0145A;
+  width: 32px;
+  height: 32px;
+  margin-right: 11px;
+}
+
+.legal-services__item-text {
+  font-size: 16px;
+  color: #323264;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.team-photo {
+  position: relative;
+}
+
+.team-photo__img {
+  width: 100%;
+}
+
+.quality {
+  padding: 60px 0 60px;
+}
+
+.quality__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.quality__description {
+  width: 938px;
+  margin-right: 60px;
+}
+
+.quality__text {
+  font-size: 19px;
+  color: black;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.quality__text:not(:first-child) {
+  margin-top: 20px;
+}
+
+.quality__title {
+  width: 361px;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /*# sourceMappingURL=style.css.map */
