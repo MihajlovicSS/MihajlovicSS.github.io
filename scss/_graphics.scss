@@ -9,12 +9,12 @@
 }
 @mixin gradient-text-reversed{
     background: $gradient-text-and-icon-reversed;
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 @mixin gradient-text{
     background: $gradient-text-and-icon;
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 @mixin arrow-small{
@@ -27,4 +27,11 @@
 }
 @mixin arrow-small-hover{
     border-color: $accent;
+}
+@mixin circle{
+    @include pseudo;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: $bg-alt;
 }

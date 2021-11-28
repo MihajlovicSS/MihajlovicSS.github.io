@@ -6,10 +6,21 @@
         justify-content: space-between;
         align-items: center;
     }
+    &__logo{
+        display: flex;
+        //align-items: center;
+    }
     &__logo-svg{
         width: 130px;
         height: 60px;
         fill: white;
+    }
+    &__logo-svg-slash{
+        width: 21px;
+        height: 47px;
+    }
+    &__logo-route{
+        @include fonts(36px, 43px, 400, $main, false);
     }
     &__contacts-and-menu{
         display: flex;
@@ -101,7 +112,7 @@
         &__link:hover::after{
             opacity: 1;
         }
-        &_link--active{
+        &__link--active{
             color: $accent;
         }
     }
@@ -127,5 +138,12 @@
     }
     .main-navigation__link::after{
         background-color: $active-regular;
+    }
+    .main-navigation__link--active{
+        color: $accent;
+    }
+    .main-navigation__link--active::after{
+        opacity: 1;
+        background-color: $accent;
     }
 }

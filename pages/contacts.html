@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="../css/style.min.css" />
+</head>
+<body>
+    <header class="main-header main-header--white">
+        <div class="container main-header__container">
+            <section class="main-header__logo">
+                <a href="#" class="main-header__logo-link">
+                    <svg class="main-header__logo-svg">
+                        <use xlink:href="../img/svg/sprite.svg#logo"></use>
+                    </svg>
+                </a>
+                <svg class="main-header__logo-svg-slash">
+                    <use xlink:href="../img/svg/sprite.svg#slash"></use>
+                </svg>
+                <span class="main-header__logo-route">contact</span>
+            </section>
+            <div class="main-header__contacts-and-menu">
+                <section class="main-header__contacts contacts">
+                    <div class="contacts__languages">
+                        <a href="#" class="contacts__language">ук</a>
+                        <a href="#" class="contacts__language">ру</a>
+                        <a href="#" class="contacts__language contacts__language--active">en</a>
+                    </div>
+                    <span class="contacts__address">
+                        Kyiv, Mechnikova str, 14/1
+                    </span>
+                    <span class="contacts__phone">
+                        0800 211 927
+                    </span>
+                    <div class="contacts__socials">
+                        <a class="contacts__link">
+                            <svg class="contacts__facebook">
+                                <use xlink:href="../img/svg/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </section>
+                <section class="main-header__menu main-navigation">
+                    <nav class="main-navigation__nav">
+                        <ul class="main-navigation__list">
+                            <li class="main-navigation__item">
+                                <a href="#" class="main-navigation__link">about us</a>
+                            </li>
+                            <li class="main-navigation__item">
+                                <a href="#" class="main-navigation__link">services</a>
+                            </li>
+                            <li class="main-navigation__item">
+                                <a href="#" class="main-navigation__link">team</a>
+                            </li>
+                            <li class="main-navigation__item">
+                                <a href="#" class="main-navigation__link">publications</a>
+                            </li>
+                            <li class="main-navigation__item">
+                                <a href="#" class="main-navigation__link main-navigation__link--active">contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
+        </div>
+    </header>
+<main>
+        <section class="contacts-and-form">
+            <div class="contacts-and-form__container container">
+                <div class="contacts-and-form__contacts-block contacts-page">
+                    <p class="contacts-page__address">Kyiv, <br>Mechnikova str, 14</p>
+                    <p class="contacts-page__phone">0800 211 927</p>
+                    <p class="contacts-page__email">contact@forstudy.space</p>
+                    <div class="contacts-page__social">
+                        <svg class="contacts-page__svg">
+                            <use xlink:href="../img/svg/sprite.svg#facebook"></use>
+                        </svg>
+                        <p class="contacts-page__facebook-text">Our page<br>on facebook</p>
+                    </div>
+                </div>
+                <div class="contacts-and-form__form-block">
+                    <form action="https://fom.in.ua/echo" class="form">
+                        <h2 class="form__title"></h2>
+                        <input type="text" name="name" class="form__name" required placeholder="Name">
+                        <textarea name="message" id="message" cols="30" rows="10" class="form__message" placeholder="Message" required></textarea>
+                        <h4 class="form__answer">How to answer you?</h4>
+                        <input type="text" name="phone" id="" class="form__phone" placeholder="Phone number" required>
+                        <input type="text" name="email" placeholder="Email" class="form__email" required>
+                        <input type="submit" class="form__submit" value="Send message">
+                    </form>
+                </div>
+            </div>
+        </section>
+</main>
+<footer class="main-footer main-footer--without-border">
+    <div class="main-footer__container container">
+        <div class="main-footer__contacts contacts">
+            <div class="contacts__address-and-map">
+                <span class="contacts__address">Kyiv, Mechnikova str, 14/1</span>
+                <a class="contacts__link-map"><span class="contacts__map">On map</span></a>
+            </div>
+            <div class="contacts__phone-and-net">
+                <svg class="contacts__facebook">
+                    <use xlink:href="../img/svg/sprite.svg#facebook"></use>	
+                </svg>
+                <span class="contacts__phone">0800 211 927</span>
+                <a class="contacts__link-email"><span class="contacts__email">contact@forstudy.space</span></a>
+            </div>
+        </div>
+        <div class="main-footer__copyrights">
+            <p class="main-footer__copyrights-text">© 2021 HLEGAL Law company, LLC</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

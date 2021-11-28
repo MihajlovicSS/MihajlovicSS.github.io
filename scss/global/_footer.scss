@@ -1,7 +1,10 @@
 .main-footer{
     @include main-paddings(32px, 0, 30px);
-    border: 2px solid $separator;
+    border-top: 2px solid $separator;
     background-color: $bg;
+    &--without-border{
+        border-top: none;
+    }
     &__container{
         display: flex;
         justify-content: space-between;

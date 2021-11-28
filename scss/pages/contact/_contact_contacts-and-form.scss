@@ -1,0 +1,91 @@
+.contacts-and-form{
+    @include main-paddings(60px, 0, 60px);
+    &__container{
+        display: flex;
+        justify-content: center;
+    }
+    &__contacts-block{
+        margin-right: 60px;
+    }
+}
+.contacts-page{
+    @include fonts(21px, 30px, 400, $main, false);
+    width: 650px;
+    &__address{
+        margin-bottom: 30px;
+    }
+    &__phone{
+        padding-top: 30px;
+        border-top: 4px solid $separator;
+    }
+    &__email{
+        margin-top: 15px;
+        color: $active-regular;
+        padding-bottom: 30px;
+        border-bottom: 4px solid $separator;
+    }
+    &__social{
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+    }
+    &__svg{
+        width: 38px;
+        height: 38px;
+        fill: $active-regular;
+        margin-right: 10px;
+    }
+    &__facebook-text{
+        text-transform: uppercase;
+        @include fonts(12px, 16px, 700, $active-regular, 1px);
+    }
+}
+.form{
+    width: 650px;
+    background-color: $bg;
+    padding: 30px;
+    &__title{
+        @include gradient-text;
+    }
+    &__name, &__message, &__phone, &__email{
+        display: block;
+        padding: 15px;
+        border: none;
+        width: 100%;
+        border-radius: 8px;
+        @include fonts(16px, 26px, 400, $text, false);
+    }
+    &__name{
+        margin-bottom: 15px;
+    }
+    input::placeholder, textarea::placeholder{
+        font-family: 'Montserrat', sans-serif;
+        @include fonts(16px, 26px, 400, $text, false);
+    }
+    &__message{
+        resize: none;
+        margin-bottom: 30px;
+    }
+    &__phone{
+        margin-bottom: 15px;
+    }
+    &__email{
+        margin-bottom: 30px;
+    }
+    &__answer{
+        margin-bottom: 15px;
+        color: $text;
+        text-transform: uppercase;
+    }
+    &__submit{
+        border: none;
+        background-color: $active-regular;
+        padding: 18px 30px;
+        text-align: center;
+        box-shadow: 0 0 20px 0 rgba(36, 163, 255, 0.5);
+        width: 100%;
+        border-radius: 12px;
+        @include fonts(16px, 19px, 700, white, false);
+        font-family: 'Montserrat', sans-serif;
+    }
+}

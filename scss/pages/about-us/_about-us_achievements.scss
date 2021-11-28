@@ -1,0 +1,32 @@
+.achievements{
+    @include main-paddings(30px, 0, 0);
+    background-color: $bg;
+    position: relative;
+    &__title{
+        text-transform: uppercase;
+        color: $main;
+        letter-spacing: 1px;
+        width: 500px;
+        @include center-block;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &__slide{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        width: 370px;
+        height: 110px;
+        background-color: white;
+        @include center-flex;
+    }
+}
+.swiper{
+    width: 100%;
+    padding-bottom: 76px;
+}
+.swiper-horizontal > .swiper-pagination-bullets{
+    bottom: 23px;
+    transform: translateX(7px);
+}

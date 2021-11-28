@@ -4,6 +4,7 @@
 3) создание спрайта.
 3) Less: переменные, миксины.
 4) расчет коэф для резиновых шрифтов.
+5) язык страницы.
 
 
 
@@ -25,3 +26,4 @@ jigsaw.w3.org/css-validator
 13)
 CSS Debugger: https://gist.github.com/addyosmani/fd3999ea7fce242756b1
 Продвинутый чеклист вёрстки: https://github.com/ihorzenich/html5checklist
+14) удалить все ненужные файлы из продакшена(style.css, css.map).
