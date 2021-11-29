@@ -78,14 +78,6 @@
         text-transform: uppercase;
     }
     &__submit{
-        border: none;
-        background-color: $active-regular;
-        padding: 18px 30px;
-        text-align: center;
-        box-shadow: 0 0 20px 0 rgba(36, 163, 255, 0.5);
         width: 100%;
-        border-radius: 12px;
-        @include fonts(16px, 19px, 700, white, false);
-        font-family: 'Montserrat', sans-serif;
     }
 }

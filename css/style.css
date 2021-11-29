@@ -198,6 +198,21 @@ body {
 
 /* =Buttons
 ---------------------------------------*/
+.button {
+  border: none;
+  background-color: #24A3FF;
+  padding: 18px 30px;
+  text-align: center;
+  -webkit-box-shadow: 0 0 20px 0 rgba(36, 163, 255, 0.5);
+          box-shadow: 0 0 20px 0 rgba(36, 163, 255, 0.5);
+  border-radius: 12px;
+  font-size: 16px;
+  color: white;
+  font-weight: 700;
+  line-height: 19px;
+  font-family: "Montserrat", sans-serif;
+}
+
 /* Graphics
 ---------------------------------------*/
 /* =Links
@@ -821,9 +836,6 @@ a:hover {
 .publications {
   padding: 30px 0 30px;
   background-color: #F5F5FA;
-  /* &__item:not(:nth-child(3n)){
-        margin-right: 30px;
-    } */
 }
 
 .publications__link {
@@ -843,13 +855,15 @@ a:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+.publications__item:not(:nth-child(3n)) {
+  margin-right: 30px;
 }
 
 .publications__item {
   width: 32.08%;
+  margin-bottom: 30px;
 }
 
 .publications .publication {
@@ -858,7 +872,6 @@ a:hover {
 
 .publications .publication__img-wrap {
   width: 100%;
-  padding-bottom: 42px;
 }
 
 .publications .publication__description {
@@ -886,6 +899,10 @@ a:hover {
   color: black;
   font-weight: 400;
   line-height: 22px;
+}
+
+.publications--main .publications__item {
+  margin-bottom: 0;
 }
 
 .main-footer {
@@ -925,6 +942,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 21px;
 }
 
 .main-footer .contacts__address {
@@ -1441,18 +1459,154 @@ a:hover {
 }
 
 .form__submit {
-  border: none;
-  background-color: #24A3FF;
-  padding: 18px 30px;
-  text-align: center;
-  -webkit-box-shadow: 0 0 20px 0 rgba(36, 163, 255, 0.5);
-          box-shadow: 0 0 20px 0 rgba(36, 163, 255, 0.5);
   width: 100%;
-  border-radius: 12px;
+}
+
+.person {
+  padding: 60px 0 60px;
+}
+
+.person__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.person__photo {
+  width: 400px;
+  height: 500px;
+  margin-right: 60px;
+}
+
+.person__description {
+  width: 900px;
+}
+
+.person__title {
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+}
+
+.person__contacts {
+  padding-bottom: 30px;
+  border-bottom: 4px solid #E6E6F0;
+  margin-bottom: 30px;
+}
+
+.person__position {
+  font-size: 14px;
+  color: #B3B3BA;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.person__email, .person__linkedin {
   font-size: 16px;
-  color: white;
+  color: #24A3FF;
+  font-weight: 400;
+  line-height: 19px;
+  margin-left: 26px;
+  position: relative;
+}
+
+.person__email::before, .person__linkedin::before {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: white;
+  background-color: #E6E6F0;
+  top: 6px;
+  left: -17px;
+}
+
+.person__text:not(:last-child) {
+  margin-bottom: 26px;
+}
+
+.person__title-small {
+  margin-bottom: 15px;
+  color: #323264;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.switcher {
+  background-color: #E6E6F0;
+  border-radius: 12px;
+  padding: 2px;
+  min-width: 233px;
+  position: relative;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.switcher__btn {
+  border-radius: 10px;
+  font-size: 16px;
+  color: #323264;
   font-weight: 700;
   line-height: 19px;
-  font-family: 'Montserrat', sans-serif;
+  margin-right: 1px;
+  position: absolute;
+}
+
+.switcher__radio-input {
+  display: none;
+}
+
+.switcher__radio-label {
+  cursor: pointer;
+  padding: 8px 30px 10px 30px;
+  display: block;
+  position: relative;
+}
+
+.switcher__white-block {
+  width: 105px;
+  height: 38px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.switcher__btn--1 {
+  top: 3px;
+  left: 3px;
+}
+
+.switcher__btn--2 {
+  top: 3px;
+  right: 3px;
+}
+
+.switcher input[type=radio]:checked + .switcher__white-block {
+  background-color: yellow;
+}
+
+.publications--flex .publications__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.publication__button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=style.css.map */

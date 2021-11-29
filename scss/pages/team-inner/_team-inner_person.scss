@@ -1,0 +1,46 @@
+.person{
+    @include main-paddings(60px, 0, 60px);
+    &__container{
+        display: flex;
+        justify-content: center;
+    }
+    &__photo{
+        width: 400px;
+        height: 500px;
+        margin-right: 60px;
+    }
+    &__description{
+        width: 900px;
+    }
+    &__title{
+        @include gradient-text;
+        margin-bottom: 15px;
+    }
+    &__contacts{
+        padding-bottom: 30px;
+        border-bottom: 4px solid $separator;
+        margin-bottom: 30px;
+    }
+    &__position{
+        @include fonts(14px, 22px, 400, $text, false);
+    }
+    &__email, &__linkedin{
+        @include fonts(16px, 19px, 400, $active-regular, false);
+        margin-left: 26px;
+        position: relative;
+    }
+    &__email::before, &__linkedin::before{
+        @include dot;
+        background-color: $separator;
+        top: 6px;left: -17px;
+    }
+    &__text:not(:last-child){
+        margin-bottom: 26px;
+    }
+    &__title-small{
+        margin-bottom: 15px;
+        color: $main;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+}

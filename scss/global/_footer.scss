@@ -16,6 +16,7 @@
         &__address-and-map{
             display: flex;
             align-items: center;
+            margin-bottom: 21px;
         }
         &__address{
             @include fonts(16px, 19px, 400, $main, false);

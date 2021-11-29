@@ -12,19 +12,18 @@
     &__block{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
     }
-    /* &__item:not(:nth-child(3n)){
+    &__item:not(:nth-child(3n)){
         margin-right: 30px;
-    } */
+    }
     &__item{
         width: 32.08%;
+        margin-bottom: 30px;
     }
     .publication{
         background-color: white;
         &__img-wrap{
             width: 100%;
-            padding-bottom: 42px;
         }
         &__description{
             padding: 30px;
@@ -42,5 +41,10 @@
             border-top: 4px solid $separator;
             @include fonts(14px, 22px, 400, black, false);
         }
+    }
+}
+.publications--main{
+    .publications__item{
+        margin-bottom: 0;
     }
 }

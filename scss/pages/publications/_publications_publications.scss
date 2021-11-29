@@ -1,0 +1,51 @@
+.switcher {
+    background-color: $separator;
+    border-radius: 12px;
+    padding: 2px;
+    min-width: 233px;
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    align-self: center;
+    &__btn {
+        border-radius: 10px;
+        @include fonts(16px, 19px, 700, $main, false);
+        margin-right: 1px;
+        position: absolute;
+    }
+    &__radio-input {
+        display: none;
+    }
+    &__radio-label {
+        cursor: pointer;
+        padding: 8px 30px 10px 30px;
+        display: block;
+        position: relative;
+    }
+    &__white-block{
+        width: 105px;
+        height: 38px;
+        background-color: white;
+        border-radius: 10px;
+    }
+    &__btn--1 {
+        top: 3px;
+        left: 3px;
+    }
+    &__btn--2 {
+        top: 3px;
+        right: 3px;
+    }
+    input[type=radio]:checked + .switcher__white-block{
+        background-color: yellow;
+    }
+}
+.publications--flex{
+    .publications__container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.publication__button{
+    align-self: center;
+}

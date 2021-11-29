@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts</title>
+    <title>Person</title>
     <link rel="stylesheet" href="../css/style.min.css" />
 </head>
-
 <body>
     <header class="main-header main-header--white">
         <div class="container main-header__container">
@@ -21,7 +19,7 @@
                 <svg class="main-header__logo-svg-slash">
                     <use xlink:href="../img/svg/sprite.svg#slash"></use>
                 </svg>
-                <span class="main-header__logo-route">contact</span>
+                <span class="main-header__logo-route">team</span>
             </section>
             <div class="main-header__contacts-and-menu">
                 <section class="main-header__contacts contacts">
@@ -54,13 +52,13 @@
                                 <a href="#" class="main-navigation__link">services</a>
                             </li>
                             <li class="main-navigation__item">
-                                <a href="#" class="main-navigation__link">team</a>
+                                <a href="#" class="main-navigation__link main-navigation__link--active">team</a>
                             </li>
                             <li class="main-navigation__item">
                                 <a href="#" class="main-navigation__link">publications</a>
                             </li>
                             <li class="main-navigation__item">
-                                <a href="#" class="main-navigation__link main-navigation__link--active">contact</a>
+                                <a href="#" class="main-navigation__link">contact</a>
                             </li>
                         </ul>
                     </nav>
@@ -69,33 +67,26 @@
         </div>
     </header>
     <main>
-        <section class="contacts-and-form">
-            <div class="contacts-and-form__container container">
-                <div class="contacts-and-form__contacts-block contacts-page">
-                    <p class="contacts-page__address">Kyiv, <br>Mechnikova str, 14</p>
-                    <p class="contacts-page__phone">0800 211 927</p>
-                    <p class="contacts-page__email">contact@forstudy.space</p>
-                    <div class="contacts-page__social">
-                        <svg class="contacts-page__svg">
-                            <use xlink:href="../img/svg/sprite.svg#facebook"></use>
-                        </svg>
-                        <p class="contacts-page__facebook-text">Our page<br>on facebook</p>
-                    </div>
+        <section class="person">
+            <div class="person__container container">
+                <div class="person__photo"><img src="../img/png/team/kobzar-big.png" alt="Oksana Kobzar" class="person__img">
                 </div>
-                <div class="contacts-and-form__form-block">
-                    <form action="https://fom.in.ua/echo" class="form">
-                        <h2 class="form__title"></h2>
-                        <input type="text" name="name" class="form__name" required placeholder="Name">
-                        <textarea name="message" id="message" cols="30" rows="10" class="form__message"
-                            placeholder="Message" required></textarea>
-                        <h4 class="form__answer">How to answer you?</h4>
-                        <input type="text" name="phone" id="" class="form__phone" placeholder="Phone number" required>
-                        <input type="text" name="email" placeholder="Email" class="form__email" required>
-                        <input type="submit" class="button form__submit" value="Send message">
-                    </form>
+                <div class="person__description">
+                    <h1 class="person__title">Oksana Kobzar</h1>
+                    <div class="person__contacts">
+                        <span class="person__position">Equity partner, Attorney-at-law</span>
+                        <a href="#" class="person__email">kobzar@forstudy.space</a>
+                        <a href="#" class="person__linkedin">LinkedIn profile</a>
+                    </div>
+                    <p class="person__text">Oksana heads the practice of international trade and shipping. He specializes in resolving disputes related to the purchase and sale of raw materials and transportation of goods by sea.</p>
+                    <p class="person__text">Desis represents the interests of shipowners, freight forwarders, cargo owners, shipping agents, container lines, as well as international banks and P&I clubs.</p>
+                    <h4 class="person__title-small">Education</h4>
+                    <p class="person__text">National University "Odessa Law Academy", Master of Law.</p>
+                    <h4 class="person__title-small">Experience</h4>
+                    <p class="person__text">Her professional experience includes resolving disputes under English law and representing interests in foreign commercial arbitrations such as GAFTA, FOSFA and LMAA. Danilo also represents the interests of clients in the state courts of Ukraine on similar disputes, as well as in the ICAC and IAC at the CCI of Ukraine</p>
                 </div>
             </div>
-        </section>
+        </section>    
     </main>
     <footer class="main-footer main-footer--without-border">
         <div class="main-footer__container container">
@@ -106,7 +97,7 @@
                 </div>
                 <div class="contacts__phone-and-net">
                     <svg class="contacts__facebook">
-                        <use xlink:href="../img/svg/sprite.svg#facebook"></use>
+                        <use xlink:href="../img/svg/sprite.svg#facebook"></use>	
                     </svg>
                     <span class="contacts__phone">0800 211 927</span>
                     <a class="contacts__link-email"><span class="contacts__email">contact@forstudy.space</span></a>
@@ -118,5 +109,4 @@
         </div>
     </footer>
 </body>
-
 </html>
