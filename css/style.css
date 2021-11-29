@@ -1710,4 +1710,16 @@ a:hover {
   width: 24px;
   height: 24px;
 }
+
+.main-header__logo-route--white {
+  color: white;
+}
+
+.wrapper-services {
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+}
+
+.companies--services {
+  padding: 80px 0 60px;
+}
 /*# sourceMappingURL=style.css.map */

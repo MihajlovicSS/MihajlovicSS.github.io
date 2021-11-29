@@ -1,0 +1,9 @@
+.main-header__logo-route--white{
+    color: white;
+}
+.wrapper-services{
+    background: $gradient-supersoft;
+}
+.companies--services{
+    @include main-paddings(80px, 0, 60px);
+}
