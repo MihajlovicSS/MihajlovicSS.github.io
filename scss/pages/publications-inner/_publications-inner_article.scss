@@ -1,0 +1,36 @@
+.article{
+    @include main-paddings(60px, 0, 60px);
+    &__container{
+        width: 1340px;
+    }
+    &__img{
+        margin-bottom: 30px;
+    }
+    &__title{
+       margin-bottom: 15px; 
+    }
+    &__date{
+        @include fonts(12px, 15px, 700, $text, 1px);
+        text-transform: uppercase;
+    }
+    &__body{
+        margin-top: 30px;
+        @include main-paddings(30px, 0, 30px);
+        border-top: 4px solid $separator;
+        border-bottom: 4px solid $separator;
+    }
+    &__text{
+        margin-bottom: 30px;
+    }
+    &__attention{
+        @include gradient-text;
+        @extend %hero-text;
+        margin-bottom: 30px;
+    }
+    &__list{
+        counter-reset: num;
+    }
+    &__title-small{
+        margin-bottom: 15px;
+    }
+}
