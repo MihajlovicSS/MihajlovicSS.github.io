@@ -10,3 +10,6 @@
     @include fonts(16px, 19px, 700, white, false);
     font-family: "Montserrat", sans-serif;
 }
+.button:hover{
+    cursor: pointer;
+}

@@ -14,6 +14,7 @@
     }
     &__text{
         margin-top: 28px;
+        @include fonts(19px, 30px, 400, black, false);
     }
     &__statistics{
         width: 388px;
@@ -22,7 +23,7 @@
         display: flex;
         flex-direction: column;
     }
-    &__item{
+    &__item:not(:last-child){
         margin-bottom: 38px;
     }
     &__item-title{

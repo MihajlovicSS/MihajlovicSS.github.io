@@ -115,6 +115,10 @@
         &__link--active{
             color: $accent;
         }
+        &__link--active::after{
+            opacity: 1;
+            background-color: $accent;
+        }
     }
 }
 .main-header--white{

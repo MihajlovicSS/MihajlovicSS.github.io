@@ -213,6 +213,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 /* Graphics
 ---------------------------------------*/
 /* =Links
@@ -457,6 +461,11 @@ a:hover {
   color: #F0145A;
 }
 
+.main-header .main-navigation__link--active::after {
+  opacity: 1;
+  background-color: #F0145A;
+}
+
 .main-header--white .main-header__logo-svg {
   fill: #323264;
 }
@@ -656,6 +665,14 @@ a:hover {
   margin-bottom: 30px;
 }
 
+.advantages .advantage__link {
+  display: block;
+}
+
+.advantages .advantage__link:hover .advantage__title {
+  color: #F0145A;
+}
+
 .advantages .advantage__title {
   color: #24A3FF;
   margin-bottom: 15px;
@@ -734,7 +751,11 @@ a:hover {
   width: 16px;
   height: 16px;
   margin-right: 15px;
-  color: #24A3FF;
+  background-color: rgba(36, 163, 255, 0.7);
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active {
+  background-color: #006CCF;
 }
 
 .companies {
@@ -870,6 +891,10 @@ a:hover {
   background-color: white;
 }
 
+.publications .publication__link:hover .publication__title {
+  color: #F0145A;
+}
+
 .publications .publication__img-wrap {
   width: 100%;
 }
@@ -880,6 +905,7 @@ a:hover {
 
 .publications .publication__title {
   margin-bottom: 15px;
+  color: #24A3FF;
 }
 
 .publications .publication__date {
@@ -993,6 +1019,10 @@ a:hover {
   margin-right: 26px;
 }
 
+.main-footer .contacts__facebook:hover {
+  fill: #F0145A;
+}
+
 .main-footer .contacts__phone {
   font-size: 16px;
   color: #46466E;
@@ -1067,6 +1097,10 @@ a:hover {
 
 .legal-services__text {
   margin-top: 28px;
+  font-size: 19px;
+  color: black;
+  font-weight: 400;
+  line-height: 30px;
 }
 
 .legal-services__statistics {
@@ -1082,7 +1116,7 @@ a:hover {
           flex-direction: column;
 }
 
-.legal-services__item {
+.legal-services__item:not(:last-child) {
   margin-bottom: 38px;
 }
 
@@ -1214,7 +1248,7 @@ a:hover {
   padding-bottom: 76px;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets {
+.swiper--about-us > .swiper-pagination-bullets {
   bottom: 23px;
   -webkit-transform: translateX(7px);
           transform: translateX(7px);
@@ -1354,13 +1388,24 @@ a:hover {
 }
 
 .contacts-page__social {
+  margin-top: 30px;
+}
+
+.contacts-page__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 30px;
+}
+
+.contacts-page__link:hover > .contacts-page__svg {
+  fill: #F0145A;
+}
+
+.contacts-page__link:hover > .contacts-page__facebook-text {
+  color: #F0145A;
 }
 
 .contacts-page__svg {

@@ -25,9 +25,17 @@
         border-bottom: 4px solid $separator;
     }
     &__social{
+        margin-top: 30px;
+    }
+    &__link{
         display: flex;
         align-items: center;
-        margin-top: 30px;
+    }
+    &__link:hover > &__svg{
+        fill: $accent;
+    }
+    &__link:hover > &__facebook-text{
+        color: $accent;
     }
     &__svg{
         width: 38px;

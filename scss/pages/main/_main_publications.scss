@@ -22,6 +22,9 @@
     }
     .publication{
         background-color: white;
+        &__link:hover .publication__title{
+            color: $accent;
+        }
         &__img-wrap{
             width: 100%;
         }
@@ -30,6 +33,7 @@
         }
         &__title{
             margin-bottom: 15px;
+            color: $active-regular;
         }
         &__date{
             @include fonts(12px, 15px, 700, $text, 1px);

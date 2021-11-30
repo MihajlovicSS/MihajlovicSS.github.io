@@ -27,6 +27,12 @@
             align-items: center;
             margin-bottom: 30px;
         }
+        &__link{
+            display: block;
+        }
+        &__link:hover .advantage__title{
+            color: $accent;
+        }
         &__title{
             color: $active-regular;
             margin-bottom: 15px;

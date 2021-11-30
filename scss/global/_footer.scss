@@ -44,6 +44,9 @@
             position: relative;
             margin-right: 26px;
         }
+        &__facebook:hover{
+            fill: $accent;
+        }
         &__phone{
             @include fonts(16px, 19px, 700, $main-alt, false);
             position: relative;
