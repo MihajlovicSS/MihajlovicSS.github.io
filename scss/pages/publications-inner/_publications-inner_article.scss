@@ -33,6 +33,16 @@
         list-style-position: inside;
         margin-bottom: 30px;
     }
+    &__list-item::marker{
+        color: $accent;
+        font-weight: 700;
+    }
+    &__list-item{
+        margin-left: 20px;
+    }
+    &__list-item:not(:last-child){
+        margin-bottom: 15px;
+    }
     &__title-small{
         margin-bottom: 15px;
     }

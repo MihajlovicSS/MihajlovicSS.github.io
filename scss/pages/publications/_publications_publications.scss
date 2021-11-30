@@ -7,12 +7,6 @@
     margin-bottom: 30px;
     display: flex;
     align-self: center;
-    &__btn {
-        border-radius: 10px;
-        @include fonts(16px, 19px, 700, $main, false);
-        margin-right: 1px;
-        position: absolute;
-    }
     &__radio-input {
         display: none;
     }
@@ -21,23 +15,22 @@
         padding: 8px 30px 10px 30px;
         display: block;
         position: relative;
+        @include fonts(16px, 19px, 700, $main, false);
+        z-index: 1;
     }
     &__white-block{
-        width: 105px;
-        height: 38px;
+        position: absolute;
+        width: 130px;
+        height: 37px;
         background-color: white;
         border-radius: 10px;
+        top: 2px;
+        right: 2px;
+        transition: all 0.2s ease-in-out;
     }
-    &__btn--1 {
-        top: 3px;
-        left: 3px;
-    }
-    &__btn--2 {
-        top: 3px;
-        right: 3px;
-    }
-    input[type=radio]:checked + .switcher__white-block{
-        background-color: yellow;
+    &__radio-input-1[type=radio]:checked ~ .switcher__white-block{
+        transform: translateX(-125px);
+        width: 104px;
     }
 }
 .publications--flex{
