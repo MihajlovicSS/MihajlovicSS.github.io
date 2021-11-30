@@ -1,0 +1,54 @@
+.service{
+    @include main-paddings(60px, 0, 45px);
+    &__container{
+        width: 1340px;
+    }
+    &__description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 60px;
+        border-bottom: 4px solid $separator;
+    }
+    &__image-wrap{
+        width: 92px;
+        height: 92px;
+        background-color: white;
+        border-radius: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    &__title{
+        @include gradient-text;
+        margin-bottom: 28px;
+    }
+    &__text{
+        margin-bottom: 28px;
+        @include fonts(19px, 30px, 400, white, false);
+        text-align: center;
+    }
+    &__details{
+        margin-top: 30px;
+    }
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        list-style-type: disc;
+        list-style-position: inside;
+    }
+    &__list-title{
+        color: white;
+        margin-bottom: 30px;
+    }
+    &__list-item{
+        width: 650px;
+        @include fonts(18px, 26px, 400, white, false);
+        margin-bottom: 15px;
+    }
+    &__list-item::marker{
+        color: $accent;
+    }
+}
