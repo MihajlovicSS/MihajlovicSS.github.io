@@ -22,6 +22,9 @@
     }
     .screen{
         min-height: 632px;
+        &__title{
+            margin-top: 215px;
+        }
     }
     .preferences{
         &__description{
@@ -71,6 +74,9 @@
     }
     .screen{
         min-height: 601px;
+        &__title{
+            margin-top: 196px;
+        }
     }
     .preferences{
         &__description{
@@ -117,11 +123,126 @@
     }
 }
 @media only screen and (max-width : 1023px){
-    
+    .container{
+        width: 648px;
+    }
+    .main-header{
+        &__container{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__contacts-and-menu{
+            align-items: flex-start;
+        }
+        &__logo{
+            display: none;
+        }
+        &__logo-inner{
+            display: block;
+            margin-bottom: 30px;
+        }
+        &__contacts{
+            margin-bottom: 30px;
+        }
+    }
+    .wrapper{
+        background-size: auto 1024px, auto auto;
+        background-position: -70px 0, 0 0;
+    }
+    .screen{
+        min-height: 767px;
+        &__title{
+            width: 560px;
+            margin-top: 215px;
+        }
+    }
+    .preferences{
+        &__container{
+            flex-direction: column;
+        }
+        &__list{
+            padding: 0 0 0 0;
+            border-right: none;
+            border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            justify-content: flex-start;
+            overflow-x: scroll;            
+        }
+        &__list::-webkit-scrollbar{
+            display: none;
+        }
+        &__li{
+            min-width: 0;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        &__li:not(:last-child){
+            margin-right: 30px;
+        }
+        &__description{
+            width: 100%;
+            margin-left: 0;
+            margin-top: 60px;
+        }
+    }
+    .advantages{
+        .advantage{
+            width: 294px;
+        }
+    }
+    .slider{
+        .slide{
+            flex-direction: column;
+        }
+    }
+    .companies{
+        padding-bottom: 0;
+        &__container{
+            width: 100%;
+            padding: 0;
+        }
+        &__item{
+            width: 33.33%;
+        }
+    }
+    .publications{
+        &__block{
+            justify-content: space-between;
+        }
+        &__item{
+            width: 309px;
+            margin-bottom: 30px;
+        }
+        &__item:not(:nth-child(3n)){
+            margin-right: 0;
+        }
+        &__item:nth-child(3n){
+            width: 100%;
+        }
+    }
+    .publications--main .publications__item:not(:nth-child(3n)){
+        margin-bottom: 30px;
+    }
+    .main-footer{
+        &__container{
+            position: relative;
+        }
+        &__copyrights{
+            position: absolute;
+            top: 5px;right: 0;
+        }
+    }
 }
+
+
+
+
+
+
+
 @media only screen and (max-width : 767px){
+    body{
+        min-width: 375px;
+    }
     
 }
-@media only screen and (max-width : 374px){
-    
-} 
