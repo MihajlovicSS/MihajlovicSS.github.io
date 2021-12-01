@@ -52,7 +52,8 @@
                                     <a href="../pages/about-us.html" class="main-navigation__link">about us</a>
                                 </li>
                                 <li class="main-navigation__item">
-                                    <a href="../pages/services.html" class="main-navigation__link main-navigation__link--active">services</a>
+                                    <a href="../pages/services.html"
+                                        class="main-navigation__link main-navigation__link--active">services</a>
                                 </li>
                                 <li class="main-navigation__item">
                                     <a href="../pages/team.html" class="main-navigation__link">team</a>
@@ -82,7 +83,28 @@
                     <p class="service__text">In addition, over time, the work will become the same type and
                         uninteresting for a full-time lawyer. And we know very well how difficult it is to find a good
                         candidate with experience in the field of information technology in Ukraine.</p>
-                    <div class="button service__button">Free consultation</div>
+                    <input type="checkbox" class="service__button-checkbox" id="popup__checkbox">
+                    <section class="popup">
+                        <div class="contacts-and-form__form-block popup__form-block">
+                            <form action="https://fom.in.ua/echo" class="form popup__form">
+                                <h2 class="form__title">We would like to help you</h2>
+                                <input type="text" name="name" class="form__name" required placeholder="Name">
+                                <textarea name="message" id="message" class="form__message" placeholder="Message"
+                                    required></textarea>
+                                <h4 class="form__answer">How to answer you?</h4>
+                                <input type="text" name="phone" id="" class="form__phone" placeholder="Phone number"
+                                    required>
+                                <input type="text" name="email" placeholder="Email" class="form__email" required>
+                                <input type="submit" class="button form__submit" value="Send message">
+                                <label class="popup__form-close popup-close" for="popup__checkbox">
+                                    <svg class="popup__close-svg">
+                                        <use xlink:href="../img/svg/sprite.svg#close"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                        </div>
+                    </section>
+                    <label class="button service__button popup-show" for="popup__checkbox">Free consultation</label>
                 </div>
                 <div class="service__details">
                     <h3 class="service__list-title">Services in this area:</h3>

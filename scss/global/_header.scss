@@ -14,6 +14,10 @@
         width: 130px;
         height: 60px;
         fill: white;
+        transition: all 0.2s ease-in;
+    }
+    &__logo-svg:hover{
+        transform: scale(1.1);
     }
     &__logo-svg-slash{
         width: 21px;
@@ -98,6 +102,9 @@
             display: block;
             @include fonts(16px, 19px, 700, white, false);
             position: relative;
+        }
+        &__link:active{
+            transform: translateY(1px);
         }
         &__link::after{
             @include pseudo;

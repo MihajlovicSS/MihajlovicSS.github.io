@@ -53,6 +53,7 @@ table {
   border-spacing: 0;
 }
 
+/* @import "../lib/swiper/swiper-bundle.min.css"; */
 /* Font-Face
 ---------------------------------------*/
 @font-face {
@@ -219,6 +220,67 @@ body {
 
 /* Graphics
 ---------------------------------------*/
+@-webkit-keyframes shaked-animation {
+  10% {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+  }
+  25% {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+  }
+  40% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  55% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  70% {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+  }
+  85% {
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes shaked-animation {
+  10% {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+  }
+  25% {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+  }
+  40% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  55% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  70% {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+  }
+  85% {
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 /* =Links
 ---------------------------------------*/
 a {
@@ -293,6 +355,13 @@ a:hover {
   width: 130px;
   height: 60px;
   fill: white;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.main-header__logo-svg:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .main-header__logo-svg-slash {
@@ -437,6 +506,11 @@ a:hover {
   font-weight: 700;
   line-height: 19px;
   position: relative;
+}
+
+.main-header .main-navigation__link:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
 }
 
 .main-header .main-navigation__link::after {
@@ -665,6 +739,15 @@ a:hover {
   margin-bottom: 30px;
 }
 
+.advantages .advantage__image-wrap:hover {
+  -webkit-animation-name: shaked-animation;
+          animation-name: shaked-animation;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
 .advantages .advantage__link {
   display: block;
 }
@@ -683,6 +766,44 @@ a:hover {
   color: white;
   font-weight: 400;
   line-height: 26px;
+}
+
+.hide-element-left {
+  opacity: 0;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
+  -webkit-transition: all 0.3s ease-in-out 0.5s;
+  transition: all 0.3s ease-in-out 0.5s;
+}
+
+.hide-element-right {
+  opacity: 0;
+  -webkit-transform: translateX(300px);
+          transform: translateX(300px);
+  -webkit-transition: all 0.3s ease-in-out 0.5s;
+  transition: all 0.3s ease-in-out 0.5s;
+}
+
+.hide-element-up {
+  opacity: 0;
+  -webkit-transform: translateY(-300px);
+          transform: translateY(-300px);
+  -webkit-transition: all 0.3s ease-in-out 0.5s;
+  transition: all 0.3s ease-in-out 0.5s;
+}
+
+.hide-element-down {
+  opacity: 0;
+  -webkit-transform: translateY(300px);
+          transform: translateY(300px);
+  -webkit-transition: all 0.3s ease-in-out 0.5s;
+  transition: all 0.3s ease-in-out 0.5s;
+}
+
+.show-element {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
 }
 
 .slider {
@@ -852,6 +973,17 @@ a:hover {
 
 .companies__item--black {
   background-color: #000000;
+}
+
+.companies__img {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+
+.companies__img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .publications {
@@ -1434,6 +1566,7 @@ a:hover {
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
 }
 
 .form__name, .form__message, .form__phone, .form__email {
@@ -1487,6 +1620,7 @@ a:hover {
 .form__message {
   resize: none;
   margin-bottom: 30px;
+  height: 151px;
 }
 
 .form__phone {
@@ -1865,5 +1999,65 @@ a:hover {
 
 .publications--service {
   margin-top: 80px;
+}
+
+.popup {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #323264;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 5;
+}
+
+.popup__form {
+  border-radius: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.popup__form-close {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  top: 30px;
+  right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup__form-close:hover {
+  background-color: #E6E6F0;
+  cursor: pointer;
+}
+
+.popup__close-svg {
+  width: 18px;
+  height: 18px;
+}
+
+.service__button-checkbox {
+  display: none;
+}
+
+.service__button-checkbox:checked + .popup {
+  display: block;
+}
+
+.popup-show {
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,44 @@
+.popup{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(50, 50, 100, 1);
+    top: 0;
+    left: 0;
+    display: none; 
+    z-index: 5;   
+    &__form{
+    border-radius: 12px; 
+    position: absolute;  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    &__form-close{
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        top: 30px;right: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__form-close:hover{
+        background-color: $separator;
+        cursor: pointer;
+    }
+    &__close-svg{
+        width: 18px;
+        height: 18px;
+    }
+}
+.service__button-checkbox{
+    display: none;
+}
+.service__button-checkbox:checked + .popup{
+    display: block;
+}
+.popup-show{
+    cursor: pointer;
+}

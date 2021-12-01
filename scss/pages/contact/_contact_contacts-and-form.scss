@@ -54,6 +54,7 @@
     padding: 30px;
     &__title{
         @include gradient-text;
+        margin-bottom: 30px;
     }
     &__name, &__message, &__phone, &__email{
         display: block;
@@ -73,6 +74,7 @@
     &__message{
         resize: none;
         margin-bottom: 30px;
+        height: 151px;
     }
     &__phone{
         margin-bottom: 15px;

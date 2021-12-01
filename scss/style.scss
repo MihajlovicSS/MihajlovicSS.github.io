@@ -2,6 +2,7 @@
 /*@import-------------------------*/
 @import "_reset";
 @import url('https://unpkg.com/swiper@7/swiper-bundle.min.css');
+/* @import "../lib/swiper/swiper-bundle.min.css"; */
 @import "_fonts";
 @import "_variables";
 @import "_mixins";
@@ -30,3 +31,4 @@
 @import "pages/services/_services";
 @import "pages/services-inner/_services-inner_service";
 @import "pages/services-inner/_services-inner_publications";
+@import "pages/services-inner/_services-inner_popup";
