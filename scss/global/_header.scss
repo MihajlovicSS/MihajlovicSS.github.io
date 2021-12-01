@@ -1,6 +1,6 @@
 /* Header Dark */
 .main-header{
-    @include main-paddings(50px, 150px, 50px);
+    @include main-paddings(50px, 0, 50px);
     &__container{
         display: flex;
         justify-content: space-between;

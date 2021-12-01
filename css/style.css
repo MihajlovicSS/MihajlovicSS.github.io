@@ -330,7 +330,7 @@ a:hover {
 
 /* Header Dark */
 .main-header {
-  padding: 50px 150px 50px;
+  padding: 50px 0 50px;
 }
 
 .main-header__container {
@@ -821,9 +821,13 @@ a:hover {
   display: flex;
 }
 
+.slider .slide__image {
+  display: block;
+}
+
 .slider .slide__image-block {
-  width: 400px;
-  height: 298px;
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
 }
 
 .slider .slide__description {
@@ -2059,5 +2063,99 @@ a:hover {
 
 .popup-show {
   cursor: pointer;
+}
+
+/* @media only screen and (max-width : 1919px){
+
+}
+@media only screen and (max-width : 1439px){
+    
+}
+@media only screen and (max-width : 1023px){
+    
+}
+@media only screen and (max-width : 767px){
+    
+}
+@media only screen and (max-width : 374px){
+    
+} */
+@media only screen and (max-width: 1919px) {
+  .container {
+    width: 1340px;
+  }
+  .wrapper {
+    background-size: 697px 799px, auto auto;
+  }
+  .screen {
+    min-height: 632px;
+  }
+  .preferences__description {
+    width: 581px;
+  }
+  .advantages .advantage {
+    width: 400px;
+  }
+  .slider .slide__image {
+    height: 100%;
+  }
+  .companies__container {
+    padding: 0;
+    width: 1440px;
+  }
+  .publications__item {
+    width: 420px;
+  }
+  .publications .publication__img {
+    display: block;
+    width: 100%;
+  }
+  .hide-element-left, .hide-element-right, .hide-element-up, .hide-element-down {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@media only screen and (max-width: 1439px) {
+  .container {
+    width: 924px;
+  }
+  .wrapper {
+    background-size: 669px 768px, auto auto;
+  }
+  .screen {
+    min-height: 601px;
+  }
+  .preferences__description {
+    width: 405px;
+  }
+  .preferences__list {
+    padding-left: 0;
+  }
+  .advantages .advantage {
+    width: 261px;
+  }
+  .slider .slide__image {
+    display: none;
+  }
+  .slider .slide__image-block {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    background: url(../../../img/png/oleksandrovskiy.png) no-repeat;
+    background-size: cover;
+    background-position: 43% 0;
+  }
+  .companies__container {
+    padding: 0;
+    width: 1024px;
+  }
+  .publications__item {
+    width: 281px;
+  }
+  .publications .publication__img {
+    display: block;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

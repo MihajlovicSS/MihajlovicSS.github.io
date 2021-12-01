@@ -1,0 +1,127 @@
+/* @media only screen and (max-width : 1919px){
+
+}
+@media only screen and (max-width : 1439px){
+    
+}
+@media only screen and (max-width : 1023px){
+    
+}
+@media only screen and (max-width : 767px){
+    
+}
+@media only screen and (max-width : 374px){
+    
+} */
+@media only screen and (max-width : 1919px){
+    .container{
+        width: 1340px;
+    }
+    .wrapper{
+        background-size: 697px 799px, auto auto;
+    }
+    .screen{
+        min-height: 632px;
+    }
+    .preferences{
+        &__description{
+            width: 581px;
+        }
+    }
+    .advantages{
+        .advantage{
+            width: 400px;
+        }
+    }
+    .slider{
+        .slide{
+            &__image{
+                height: 100%;
+            }
+        }
+    }
+    .companies{
+        &__container{
+            padding: 0;
+            width: 1440px;
+        }
+    }
+    .publications{
+        &__item{
+            width: 420px;
+        }
+        .publication{
+            &__img{
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    .hide-element-left, .hide-element-right, .hide-element-up, .hide-element-down{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@media only screen and (max-width : 1439px){
+    .container{
+        width: 924px;
+    }
+    .wrapper{
+        background-size: 669px 768px, auto auto;
+    }
+    .screen{
+        min-height: 601px;
+    }
+    .preferences{
+        &__description{
+            width: 405px;
+        }
+        &__list{
+            padding-left: 0;
+        }
+    }
+    .advantages{
+        .advantage{
+            width: 261px;
+        }
+    }
+    .slider{
+        .slide{
+            &__image{
+                display: none;
+            }
+            &__image-block{
+                flex-shrink: 0;
+                background: url(../../../img/png/oleksandrovskiy.png) no-repeat;
+                background-size: cover;
+                background-position: 43% 0;
+            }
+        }
+    }
+    .companies{
+        &__container{
+            padding: 0;
+            width: 1024px;
+        }
+    }
+    .publications{
+        &__item{
+            width: 281px;
+        }
+        .publication{
+            &__img{
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
+@media only screen and (max-width : 1023px){
+    
+}
+@media only screen and (max-width : 767px){
+    
+}
+@media only screen and (max-width : 374px){
+    
+} 

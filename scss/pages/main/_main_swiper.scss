@@ -6,9 +6,11 @@
     }
     .slide{
         display: flex;
+        &__image{
+            display: block;
+        }
         &__image-block{
-            width: 400px;
-            height: 298px;
+            flex-basis: 400px;
         }
         &__description{
             flex-grow: 1;
