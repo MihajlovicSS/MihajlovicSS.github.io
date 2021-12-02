@@ -1,0 +1,131 @@
+@media only screen and (max-width : 1919px){
+    .legal-services{
+        &__container{
+            align-items: flex-start;
+        }
+        &__description{
+            width: 662px;
+        }
+        &__statistics{
+            width: 354px;
+        }
+    }
+    .quality{
+        &__description{
+            width: 658px;
+        }
+        &__title{
+            width: 362px;
+        }
+    }
+    .achievements{
+        &__item{
+            width: 300px;
+        }
+    }
+}
+
+@media only screen and (max-width : 1439px){
+    .legal-services{
+        &__description{
+            width: 486px;
+        }
+        &__statistics{
+            width: 354px;
+        }
+    }
+    .quality{
+        &__description{
+            width: 482px;
+        }
+    }
+    .achievements{
+        &__item{
+            width: 196px;
+        }
+    }
+}
+
+@media only screen and (max-width : 1023px){
+    .main-header{
+        .contacts{
+            margin-bottom: 30px;
+        }
+        &__logo-inner{
+            display: flex;
+            align-items: flex-start;
+        }
+    }
+    .legal-services{
+        padding-bottom: 30px;
+        &__container{
+            flex-direction: column;
+        }
+        &__description{
+            margin-right: 0;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        &__statistics{
+            width: 100%;
+        }
+    }
+    .quality{
+        &__container{
+            flex-direction: column;
+        }
+        &__description{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        &__title{
+            width: 100%;
+        }
+    }
+    .achievements{
+        &__item{
+            width: 132px;
+            height: 90px;
+        }
+        .achievement{
+            &__img{
+                width: 75%;
+            }
+        }
+    }
+    .quality{
+        padding-top: 30px;
+    }
+}
+
+@media only screen and (max-width : 767px){
+    .container{
+        padding-left: 0;
+        padding-right: 0;
+        width: 315px;
+    }
+    .main-header{
+        &__logo-svg-slash{
+            width: 12px;
+            height: 26px;
+        }
+        &__logo-route{
+            font-size: 20px;
+            line-height: 24px;
+        }
+        &::before{
+            background: rgba(245,245,250, 1);
+        }
+    }
+    .legal-services{
+        &__title{
+            font-size: 30px;
+            line-height: 36px;
+        }
+    }
+    .achievements{
+        &__title{
+            width: 100%;
+        }
+    }
+}
