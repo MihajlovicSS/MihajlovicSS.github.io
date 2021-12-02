@@ -55,4 +55,9 @@
         <path d="M7 7L25 25" stroke="#EC6F5D" stroke-width="2"/>
         <path d="M25 7L7 25" stroke="#EC6F5D" stroke-width="2"/>
     </symbol>
+    <symbol id="hamburger" viewBox="0 0 32 33">
+        <path d="M7 10.5H25" stroke="white" stroke-width="2"/>
+        <path d="M7 16.5H25" stroke="white" stroke-width="2"/>
+        <path d="M7 22.5H25" stroke="white" stroke-width="2"/>
+    </symbol>
 </svg>
