@@ -2299,13 +2299,16 @@ a:hover {
     min-width: 375px;
   }
   .container {
-    width: 375px;
+    width: 345px;
     padding: 0 15px;
   }
   .main-header {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0 10px 0;
     position: relative;
+  }
+  .main-header__container {
+    padding-left: 0;
+    padding-right: 0;
   }
   .main-header__contacts-and-menu {
     width: 100%;
@@ -2383,6 +2386,8 @@ a:hover {
     position: absolute;
     width: calc(100vw - 16px);
     bottom: 0;
+    -webkit-transition: all 0.2s ease-in-out 1s;
+    transition: all 0.2s ease-in-out 1s;
   }
   .sandwich__item:not(:last-child) {
     margin-bottom: 15px;
@@ -2431,6 +2436,108 @@ a:hover {
   }
   .sandwich__checkbox:checked + .sandwich__nav {
     display: block;
+  }
+  .wrapper {
+    background-size: auto 600px, auto auto;
+    background-position: -37px 0, 0 0;
+  }
+  .screen {
+    min-height: 500px;
+  }
+  .screen__title {
+    width: 100%;
+    margin-top: 131px;
+  }
+  .preferences {
+    padding-top: 30px;
+  }
+  .preferences__link {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .preferences__description {
+    margin-top: 30px;
+  }
+  .preferences__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .advantages .advantage {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .advantages__title {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+  .slider .slide__quote {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .companies__item {
+    width: 100%;
+  }
+  .companies__item:nth-child(n+7) {
+    display: none;
+  }
+  .publications__title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .publications .publication {
+    width: 100%;
+  }
+  .main-footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-footer .contacts {
+    width: 100%;
+  }
+  .main-footer .contacts__address-and-map {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-footer .contacts__address {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .main-footer .contacts__address::after {
+    display: none;
+  }
+  .main-footer .contacts__phone-and-net {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-footer .contacts__facebook, .main-footer .contacts__phone {
+    margin-right: 0;
+  }
+  .main-footer .contacts__phone {
+    margin-bottom: 10px;
+  }
+  .main-footer .contacts__phone::before, .main-footer .contacts__phone::after {
+    display: none;
+  }
+  .main-footer .contacts__link {
+    height: 38px;
+    margin-bottom: 10px;
+  }
+  .main-footer .contacts__link-email {
+    margin-bottom: 30px;
+  }
+  .main-footer__copyrights {
+    position: static;
+    width: 100%;
+  }
+  .main-footer__copyrights-text {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
