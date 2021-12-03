@@ -127,5 +127,26 @@
         &__title{
             width: 100%;
         }
+
+        .swiper--about-us{
+            display: none;
+        }
+        .swiper--about-us-2{
+            display: block;
+            padding-bottom: 76px;
+            .swiper-pagination{
+                bottom: 23px;
+                transform: translateX(10px);
+            }
+            .achievements__item{
+                width: 255px;
+                height: 90px;
+                @include center-block;
+                border-radius: 12px;
+            }
+            .achievement__img{
+                width: 35%;
+            }
+        }
     }
 }

@@ -44,6 +44,17 @@
                         </a>
                     </div>
                 </section>
+                <section class="main-header__logo main-header__logo-inner">
+                    <a href="../index.html" class="main-header__logo-link">
+                        <svg class="main-header__logo-svg">
+                            <use xlink:href="../img/svg/sprite.svg#logo"></use>
+                        </svg>
+                    </a>
+                    <svg class="main-header__logo-svg-slash">
+                        <use xlink:href="../img/svg/sprite.svg#slash"></use>
+                    </svg>
+                    <span class="main-header__logo-route">contact</span>
+                </section>
                 <section class="main-header__menu main-navigation">
                     <nav class="main-navigation__nav">
                         <ul class="main-navigation__list">
@@ -64,6 +75,34 @@
                             </li>
                         </ul>
                     </nav>
+                </section>
+                <section class="sandwich">
+                    <input type="checkbox" class="sandwich__checkbox" id="sandwich__checkbox">
+                    <nav class="sandwich__nav">
+                        <ul class="sandwich__list">
+                            <li class="sandwich__item">
+                                <a href="pages/about-us.html" class="sandwich__link">about us</a>
+                            </li>
+                            <li class="sandwich__item">
+                                <a href="pages/services.html" class="sandwich__link">services</a>
+                            </li>
+                            <li class="sandwich__item">
+                                <a href="pages/team.html" class="sandwich__link">team</a>
+                            </li>
+                            <li class="sandwich__item">
+                                <a href="pages/publications.html" class="sandwich__link">publications</a>
+                            </li>
+                            <li class="sandwich__item">
+                                <a href="pages/contacts.html" class="sandwich__link">contact</a>
+                            </li>
+                            <label class="sandwich__close" for="sandwich__checkbox">
+                                <svg class="sandwich__close-svg">
+                                    <use xlink:href="../img/svg/sprite.svg#close"></use>
+                                </svg>
+                            </label>
+                        </ul>
+                    </nav>
+                    <label class="sandwich__button sandwich-show" for="sandwich__checkbox"></label>
                 </section>
             </div>
         </div>

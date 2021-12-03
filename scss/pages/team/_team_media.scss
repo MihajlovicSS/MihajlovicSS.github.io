@@ -1,0 +1,65 @@
+@media only screen and (max-width : 1919px){
+    .team{
+        .teammate{
+            width: 400px;
+        }
+    }
+}
+@media only screen and (max-width : 1439px){
+    .team{
+        &__title{
+            width: 664px;
+            text-align: left;
+        }
+        .teammate{
+            width: 261px;
+        }
+    }
+}
+@media only screen and (max-width : 1023px){
+    .team{
+        padding-top: 0;
+        &__container{
+            padding: 0;
+        }
+        &__title{
+            width: 100%;
+            text-align: left;
+        }
+        &__block{
+            flex-direction: row;
+        }
+        .teammate{
+            width: 294px;
+        }
+        &__teammate:not(:nth-child(3n)){
+            margin-bottom: 0;
+            margin-right: 0;
+        }
+        &__teammate:not(:nth-child(2n)){
+            margin-right: 60px;
+        }
+        &__teammate:nth-child(n){
+            margin-bottom: 60px;
+        }
+    }
+}
+@media only screen and (max-width : 767px){
+    .team{
+        &__title{
+            font-size: 30px;
+            line-height: 36px;
+            margin-bottom: 30px;
+        }
+        &__block{
+            flex-direction: row;
+        }
+        .teammate{
+            width: 315px;
+        }
+        &__teammate:nth-child(n){
+            margin-bottom: 30px;
+            margin-right: 0;
+        }
+    }
+}

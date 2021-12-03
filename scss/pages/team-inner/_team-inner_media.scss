@@ -1,0 +1,87 @@
+@media only screen and (max-width : 1919px){
+    .person{
+        &__description{
+            width: 620px;
+        }
+    }
+}
+@media only screen and (max-width : 1439px){
+    .person{
+        padding-top: 0;
+        &__photo{
+            width: 300px;
+            height: auto;
+        }
+        &__img{
+            width: 100%;
+        }
+        &__description{
+            width: 544px;
+        }
+        &__contacts{
+            display: flex;
+            flex-direction: column;
+        }
+        &__email::before, &__linkedin::before{
+            display: none;
+        }
+        &__email, &__linkedin{
+            margin-left: 0;
+            margin-top: 10px;
+        }
+    }
+}
+@media only screen and (max-width : 1023px){
+    .container{
+        padding: 0;
+    }
+    .person{
+        display: none;
+    }
+    .person-for-small{
+        &__container{
+            flex-direction: column;
+        }
+        display: block;
+        .person__photo-and-contacts{
+            width: 100%;
+            display: flex;
+            padding-bottom: 30px;
+            border-bottom: 4px solid $separator;
+        }
+        .person__contacts{
+            border-bottom: none;
+            flex-grow: 1;
+            justify-content: center;
+        }
+        .person__photo{
+            margin-right: 30px;
+        }
+        .person__img{
+            display: block;
+        }
+        .person__description{
+            padding-top: 30px;
+            padding-bottom: 60px;
+        }
+    }    
+}
+@media only screen and (max-width : 767px){
+    .person-for-small{
+        .person__photo-and-contacts{
+            flex-direction: column;
+        }
+        .person__contacts{
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .person__photo{
+            width: 315px;
+            margin-bottom: 30px;
+        }
+        .person__description{
+            width: 100%;
+            padding-bottom: 30px;
+        }
+    }    
+}

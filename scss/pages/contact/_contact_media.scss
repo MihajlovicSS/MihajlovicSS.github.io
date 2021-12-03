@@ -1,0 +1,42 @@
+@media only screen and (max-width : 1919px){
+    .contacts-and-form{
+        padding-top: 30px;
+    }
+    .contacts-page{
+        width: 510px;
+    }
+    .form{
+        width: 510px;
+    }
+}
+
+@media only screen and (max-width : 1439px){
+    .contacts-page{
+        width: 422px;
+    }
+    .form{
+        width: 422px;
+    }
+}
+@media only screen and (max-width : 1023px){
+    .contacts-and-form{
+        &__container{
+            flex-direction: column;
+        }
+    }
+    .contacts-page{
+        width: 100%;
+        padding-bottom: 60px;
+    }
+    .form{
+        width: 100%;
+    }
+}
+@media only screen and (max-width : 767px){
+    .contacts-and-form{
+        padding-bottom: 30px;
+    }
+    .contacts-page{
+        padding-bottom: 30px;
+    }
+}
