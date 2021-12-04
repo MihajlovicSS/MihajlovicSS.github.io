@@ -831,6 +831,7 @@ a:hover {
 
 .slider .slide__image {
   display: block;
+  height: 100%;
 }
 
 .slider .slide__image-block {

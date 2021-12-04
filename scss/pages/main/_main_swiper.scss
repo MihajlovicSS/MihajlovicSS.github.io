@@ -8,6 +8,7 @@
         display: flex;
         &__image{
             display: block;
+            height: 100%;
         }
         &__image-block{
             flex-basis: 400px;
