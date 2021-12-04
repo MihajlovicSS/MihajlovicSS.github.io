@@ -41,7 +41,8 @@
 @media only screen and (max-width : 767px){
     .service{
         &__container{
-            width: 315px;
+            width: 100%;
+            padding: 0 30px;
         }
         &__list-item{
             width: 100%;

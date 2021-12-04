@@ -1597,6 +1597,15 @@ a:hover {
   line-height: 26px;
 }
 
+.form__name:focus, .form__message:focus, .form__phone:focus, .form__email:focus {
+  outline: none;
+  border: 1px solid #24A3FF;
+}
+
+.form__name:invalid, .form__message:invalid, .form__phone:invalid, .form__email:invalid {
+  border: 1px solid #FF0000;
+}
+
 .form__name {
   margin-bottom: 15px;
 }
@@ -1655,6 +1664,14 @@ a:hover {
 
 .form__submit {
   width: 100%;
+}
+
+.form__submit:hover {
+  background-color: #0085FF;
+}
+
+.form__submit:active {
+  background-color: #006CCF;
 }
 
 .person {
@@ -1770,7 +1787,7 @@ a:hover {
 .switcher__white-block {
   position: absolute;
   width: 130px;
-  height: 37px;
+  height: 36px;
   background-color: white;
   border-radius: 10px;
   top: 2px;
@@ -2193,7 +2210,7 @@ a:hover {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    width: calc(100% - 120px);
+    width: 648px;
   }
   .main-header__contacts-and-menu {
     -webkit-box-align: start;
@@ -2455,7 +2472,7 @@ a:hover {
   }
   .screen__title {
     width: 100%;
-    margin-top: 175px;
+    margin-top: 115px;
   }
   .preferences {
     padding-top: 30px;
@@ -2653,10 +2670,8 @@ a:hover {
 }
 
 @media only screen and (max-width: 767px) {
-  .container {
-    padding-left: 0;
-    padding-right: 0;
-    width: 315px;
+  .main-header--white::before {
+    background: #f5f5fa;
   }
   .main-header__logo-svg-slash {
     width: 12px;
@@ -2666,10 +2681,11 @@ a:hover {
     font-size: 20px;
     line-height: 24px;
   }
-  .main-header::before {
-    background: #f5f5fa;
-  }
   .legal-services__title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .quality__title {
     font-size: 30px;
     line-height: 36px;
   }
@@ -2689,8 +2705,8 @@ a:hover {
             transform: translateX(10px);
   }
   .achievements .swiper--about-us-2 .achievements__item {
-    width: 255px;
-    height: 90px;
+    width: 100%;
+    height: auto;
     margin: 0 auto;
     border-radius: 12px;
   }
@@ -2748,6 +2764,10 @@ a:hover {
 }
 
 @media only screen and (max-width: 767px) {
+  .team__container {
+    width: 100%;
+    padding: 0 15px;
+  }
   .team__title {
     font-size: 30px;
     line-height: 36px;
@@ -2760,7 +2780,7 @@ a:hover {
             flex-direction: row;
   }
   .team .teammate {
-    width: 315px;
+    width: 100%;
   }
   .team__teammate:nth-child(n) {
     margin-bottom: 30px;
@@ -2807,9 +2827,6 @@ a:hover {
 }
 
 @media only screen and (max-width: 1023px) {
-  .container {
-    padding: 0;
-  }
   .person {
     display: none;
   }
@@ -2857,6 +2874,13 @@ a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .person-for-small .person__photo {
+    margin-right: 0;
+    margin-bottom: 0;
   }
   .person-for-small .person__contacts {
     margin-bottom: 0;
@@ -2913,6 +2937,9 @@ a:hover {
   .contacts-and-form {
     padding-bottom: 30px;
   }
+  .contacts-and-form__container {
+    padding: 0 30px;
+  }
   .contacts-page {
     padding-bottom: 30px;
   }
@@ -2921,6 +2948,15 @@ a:hover {
 @media only screen and (max-width: 1023px) {
   .publications__item--small-screen:nth-child(3n) {
     width: 309px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .publications__container {
+    padding: 0 30px;
+  }
+  .publications__item--small-screen:nth-child(3n) {
+    width: 100%;
   }
 }
 
@@ -2951,7 +2987,8 @@ a:hover {
 
 @media only screen and (max-width: 767px) {
   .article__container {
-    width: 315px;
+    width: 100%;
+    padding: 0 30px;
   }
   .article__attention {
     font-size: 30px;
@@ -3015,7 +3052,8 @@ a:hover {
 
 @media only screen and (max-width: 767px) {
   .service__container {
-    width: 315px;
+    width: 100%;
+    padding: 0 30px;
   }
   .service__list-item {
     width: 100%;

@@ -3,3 +3,13 @@
         width: 309px;
     }
 }
+@media only screen and (max-width : 767px){
+    .publications{
+        &__container{
+            padding: 0 30px;
+        }
+    }
+    .publications__item--small-screen:nth-child(3n){
+        width: 100%;
+    }
+}

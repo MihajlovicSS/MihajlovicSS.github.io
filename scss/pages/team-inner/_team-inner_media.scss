@@ -32,9 +32,6 @@
     }
 }
 @media only screen and (max-width : 1023px){
-    .container{
-        padding: 0;
-    }
     .person{
         display: none;
     }
@@ -70,6 +67,11 @@
     .person-for-small{
         .person__photo-and-contacts{
             flex-direction: column;
+            align-items: center;
+        }
+        .person__photo{
+            margin-right: 0;
+            margin-bottom: 0;
         }
         .person__contacts{
             margin-bottom: 0;
